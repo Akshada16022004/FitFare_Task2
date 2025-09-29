@@ -1,0 +1,201 @@
+/* Page Header with Right-aligned Button */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.page-title {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.header-actions {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+/* Add User Button Styling */
+.add-user-btn {
+  background: linear-gradient(135deg, #4361ee, #3a0ca3);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(67, 97, 238, 0.3);
+  white-space: nowrap;
+}
+
+.add-user-btn:hover {
+  background: linear-gradient(135deg, #3a0ca3, #7209b7);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(67, 97, 238, 0.4);
+}
+
+.add-user-btn:active {
+  transform: translateY(0);
+}
+
+.add-user-btn i {
+  font-size: 1rem;
+}
+
+/* Updated Action Buttons - Better Visibility */
+.action-buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.btn-action {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s ease;
+  min-width: 100px;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-delete {
+  background: linear-gradient(135deg, #f72585, #d90429);
+  color: white;
+  border: 2px solid #f72585;
+}
+
+.btn-delete:hover {
+  background: linear-gradient(135deg, #d90429, #b1001f);
+  border-color: #d90429;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(217, 4, 41, 0.3);
+}
+
+.btn-delete:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(217, 4, 41, 0.3);
+}
+
+.btn-disabled {
+  background: #6c757d;
+  color: white;
+  cursor: not-allowed;
+  opacity: 0.7;
+  border: 2px solid #6c757d;
+}
+
+.action-text {
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+/* Make the delete icon more prominent */
+.btn-delete i {
+  font-size: 0.9rem;
+}
+
+/* User Info Styles */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-name {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.admin-badge {
+  background: linear-gradient(135deg, #4361ee, #3a0ca3);
+  color: white;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(67, 97, 238, 0.2);
+}
+
+/* Table cell specific styling for actions */
+.data-table td:last-child {
+  text-align: center;
+  padding: 12px 8px;
+}
+
+/* Ensure the actions column has enough space */
+.data-table th:last-child {
+  text-align: center;
+  min-width: 120px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .page-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+  
+  .header-actions {
+    justify-content: flex-end;
+  }
+  
+  .page-title {
+    text-align: center;
+  }
+  
+  .btn-action {
+    min-width: 80px;
+    padding: 8px 12px;
+  }
+  
+  .action-text {
+    display: none;
+  }
+  
+  .btn-action i {
+    font-size: 1rem;
+    margin: 0;
+  }
+  
+  .data-table th:last-child {
+    min-width: 80px;
+  }
+  
+  .add-user-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Hover effects for the entire row */
+.data-table tbody tr:hover {
+  background: #f8f9fa;
+  transform: translateY(-1px);
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Highlight delete button on row hover */
+.data-table tbody tr:hover .btn-delete {
+  background: linear-gradient(135deg, #d90429, #b1001f);
+  box-shadow: 0 4px 12px rgba(217, 4, 41, 0.4);
+}
